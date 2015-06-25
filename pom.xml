@@ -53,7 +53,7 @@
     </dependencies>
 
     <build>
-        <finalName>ping</finalName>
+        <finalName>todo</finalName>
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>

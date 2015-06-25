@@ -18,4 +18,5 @@ public class Ping {
     public Response pong() {
         return Response.noContent().build();
     }
+
 }
