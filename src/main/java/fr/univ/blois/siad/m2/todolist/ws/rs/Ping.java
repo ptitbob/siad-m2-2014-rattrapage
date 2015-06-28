@@ -4,9 +4,6 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.core.Response;
 
-/**
- * Created by francois on 24/06/15.
- */
 @Path("/")
 public class Ping {
 
