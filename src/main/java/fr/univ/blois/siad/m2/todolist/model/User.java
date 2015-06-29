@@ -1,25 +1,33 @@
 package fr.univ.blois.siad.m2.todolist.model;
 
+import javax.xml.bind.annotation.*;
 import java.util.Objects;
+
+import static javax.xml.bind.annotation.XmlAccessType.FIELD;
 
 /*
 Cette classe doit presenter une serialisation XML avec le login et l'id en attribut, la ville en element
  */
+@XmlRootElement
+@XmlAccessorType(FIELD)
 public class User {
 
     /**
      * Identifiant
      */
+    @XmlAttribute
     private Long id;
 
     /**
      * Login de l'utilisateur
      */
+    @XmlAttribute
     private String login;
 
     /**
      * Vile de l'utilisateur
      */
+    @XmlElement
     private Town town;
 
     /**

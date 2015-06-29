@@ -1,14 +1,21 @@
 package fr.univ.blois.siad.m2.todolist.model;
 
+import javax.xml.bind.annotation.*;
 import java.util.Objects;
+
+import static javax.xml.bind.annotation.XmlAccessType.FIELD;
 
 /*
 Cette classe doit presenter une serialisation XML avec la ville en element et le code postale en attribut
  */
+@XmlRootElement
+@XmlAccessorType(FIELD)
 public class Town {
 
+    @XmlElement
     private String name;
 
+    @XmlAttribute
     private String zipCode;
 
     public Town() {
