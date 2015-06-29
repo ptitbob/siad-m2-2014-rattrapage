@@ -4,7 +4,6 @@ import fr.univ.blois.siad.m2.todolist.exception.NotFoundEntityException;
 import fr.univ.blois.siad.m2.todolist.model.User;
 
 import javax.inject.Inject;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
