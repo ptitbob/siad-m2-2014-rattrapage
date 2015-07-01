@@ -4,12 +4,14 @@ import fr.univ.blois.siad.m2.todolist.model.User;
 import fr.univ.blois.siad.m2.todolist.service.UserService;
 
 import javax.inject.Inject;
+import javax.ws.rs.Path;
 import java.util.List;
 
 /*
 Point 1 - L'acces aux API de cette classe doit se faire selon cette URL : http://localhost:8080/todo/api/user
 De plus, elle doit produire et consommer des donnée de type XML ou JSON
  */
+@Path("user")
 public class UserAPI {
 
     @Inject
