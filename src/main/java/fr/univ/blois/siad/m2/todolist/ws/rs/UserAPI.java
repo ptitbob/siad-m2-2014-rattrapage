@@ -71,5 +71,10 @@ public class UserAPI {
     /*
     Point 7 - Méthode permettant de modifier un utilisateir (dans le corp de la requete) avec cette URL : http://localhost:8080/todo/api/user/
      */
+    @PUT
+    public Response updateUser(User user) throws NotFoundEntityException {
+        userService.updateUser(user);
+        return Response.ok().build();
+    }
 
 }
