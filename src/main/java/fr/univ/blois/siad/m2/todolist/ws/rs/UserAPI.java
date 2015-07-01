@@ -5,6 +5,7 @@ import fr.univ.blois.siad.m2.todolist.service.UserService;
 
 import javax.inject.Inject;
 import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
 import java.util.List;
 
 /*
@@ -12,6 +13,7 @@ Point 1 - L'acces aux API de cette classe doit se faire selon cette URL : http:/
 De plus, elle doit produire et consommer des donnée de type XML ou JSON
  */
 @Path("user")
+@Produces({"application/json", "application/xml"})
 public class UserAPI {
 
     @Inject
