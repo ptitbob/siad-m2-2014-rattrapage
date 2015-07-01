@@ -5,10 +5,8 @@ import fr.univ.blois.siad.m2.todolist.model.User;
 import fr.univ.blois.siad.m2.todolist.service.UserService;
 
 import javax.inject.Inject;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
+import javax.ws.rs.core.Response;
 import java.util.List;
 
 /*
@@ -44,6 +42,12 @@ public class UserAPI {
     /*
     Point 4 - Méthode permettant de supprimer l'utilisateur avec cette url : http://localhost:8080/todo/api/user/1
      */
+    @DELETE
+    @Path("/{id:[0-9][0-9]*}")
+    public Response deleteById(@PathParam("id") Long id) throws NotFoundEntityException {
+        userService.deleteUser(id);
+        return Response.ok().build();
+    }
 
     /*
     Point 5 - Méthode permettant de renvoyer tous les utilisateur d'une vile (code postale) avec celle url: http://localhost:8080/todo/api/user/?zipcode=41000
