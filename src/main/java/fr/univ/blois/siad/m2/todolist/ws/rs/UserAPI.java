@@ -52,6 +52,11 @@ public class UserAPI {
     /*
     Point 5 - Méthode permettant de renvoyer tous les utilisateur d'une vile (code postale) avec celle url: http://localhost:8080/todo/api/user/?zipcode=41000
     */
+    @GET
+    @Path("/zip")
+    public List<User> getUserPerZipCode(@QueryParam("zipcode") String zipCode) {
+        return userService.getUserByZipCode(zipCode);
+    }
 
     /*
     Point 6 - Méthode permattant d'ajouter un utilisateur (dans le corp de la requete) sur cette url : http://localhost:8080/todo/api/user/
