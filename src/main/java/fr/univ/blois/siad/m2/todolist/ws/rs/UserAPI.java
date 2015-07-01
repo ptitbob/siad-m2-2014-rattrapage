@@ -7,6 +7,7 @@ import fr.univ.blois.siad.m2.todolist.service.UserService;
 import javax.inject.Inject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
+import javax.ws.rs.core.UriBuilder;
 import java.util.List;
 
 /*
@@ -61,6 +62,11 @@ public class UserAPI {
     /*
     Point 6 - Méthode permattant d'ajouter un utilisateur (dans le corp de la requete) sur cette url : http://localhost:8080/todo/api/user/
      */
+    @POST
+    public Response createUser(User user) {
+        User userCreated = userService.createUser(user);
+        return Response.created(UriBuilder.fromResource(UserAPI.class).path(String.valueOf(userCreated.getId())).build()).build();
+    }
 
     /*
     Point 7 - Méthode permettant de modifier un utilisateir (dans le corp de la requete) avec cette URL : http://localhost:8080/todo/api/user/
