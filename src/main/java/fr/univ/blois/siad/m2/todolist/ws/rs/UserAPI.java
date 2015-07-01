@@ -4,6 +4,7 @@ import fr.univ.blois.siad.m2.todolist.model.User;
 import fr.univ.blois.siad.m2.todolist.service.UserService;
 
 import javax.inject.Inject;
+import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import java.util.List;
@@ -23,6 +24,7 @@ public class UserAPI {
     point 2 - Méthode repondant à la requete http://localhost:8080/todo/api/user
     Renvoyant la liste des utlisateur
      */
+    @GET
     public List<User> getUserList() {
         return userService.getUserList();
     }
